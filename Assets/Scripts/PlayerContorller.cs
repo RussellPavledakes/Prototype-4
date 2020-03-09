@@ -35,12 +35,12 @@ public class PlayerContorller : MonoBehaviour
             hasPowerup = true;
             powerupIndicartor.gameObject.SetActive(true);
             Destroy(other.gameObject);
-            StartCoroutine(powerupCountdownRoutine());
+            StartCoroutine(PowerupCountdownRoutine());
 
         }
     }
 
-    IEnumerator powerupCountdownRoutine()
+    IEnumerator PowerupCountdownRoutine()
     {
         yield return new WaitForSeconds(7);
         hasPowerup = false;
